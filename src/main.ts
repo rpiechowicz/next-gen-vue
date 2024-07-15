@@ -4,6 +4,10 @@ import { router } from './routes'
 
 import '@/assets/index.css'
 
-createApp(App)
+const app = createApp(App)
+const pinia = createPinia()
+
+app
   .use(router)
+  .use(pinia)
   .mount('#app')
