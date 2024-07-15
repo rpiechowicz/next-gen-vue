@@ -1,11 +1,39 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.app.json"
+  "compilerOptions": {
+    "target": "esnext",
+    "jsx": "preserve",
+    "lib": ["dom", "esnext"],
+    "useDefineForClassFields": true,
+    "baseUrl": ".",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "paths": {
+      "@/*": ["src/*"]
     },
-    {
-      "path": "./tsconfig.node.json"
-    }
+    "types": [
+      "node",
+      "vite/client",
+      "unplugin-vue-router/client",
+      "unplugin-auto-import/client",
+      "unplugin-vue-components/client",
+    ],
+    "strict": true,
+    "declaration": true,
+    "declarationDir": "dist",
+    "importHelpers": true,
+    "outDir": "dist",
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": false,
+    "skipLibCheck": true
+  },
+  "tsc-alias": {
+    "verbose": true,
+    "resolveFullPaths": true
+  },
+  "exclude": [
+    "dist",
+    "node_modules"
   ]
 }
